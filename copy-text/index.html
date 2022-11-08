@@ -4,11 +4,20 @@
         <meta charset="UTF-8" />
         <title>constructor-node</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <!-- 1. Define some markup -->
-        <div id="btn" data-clipboard-text="1">
-            <span>Copy</span>
+        <div class="container">
+            <div class="copy-to-clipboard">
+                <div id="btn" data-clipboard-text="1">
+                    Copy to
+                    <span class="tooltip">
+                        Clipboard
+                        <span class="tooltiptext">Copy Text</span>
+                    </span>
+                </div>
+            </div>
         </div>
 
         <!-- 2. Include library -->
@@ -16,13 +25,16 @@
 
         <!-- 3. Instantiate clipboard by passing a HTML element -->
         <script>
-            var btn = document.getElementById("btn");
-            var clipboard = new ClipboardJS(btn);
+            let tooltip = document.querySelector(".tooltiptext");
+            let clipboard = new ClipboardJS(btn);
+            let clearTooltip;
 
             clipboard.on("success", function (e) {
-                console.info("Action:", e.action);
-                console.info("Text:", e.text);
-                console.info("Trigger:", e.trigger);
+                tooltip.innerHTML = "Copied!";
+                clearInterval(clearTooltip);
+                clearTooltip = setTimeout(() => {
+                    tooltip.innerHTML = "Copy Text";
+                }, 2000);
             });
 
             clipboard.on("error", function (e) {
