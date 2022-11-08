@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>target-input</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- 1. Define some markup -->
+
+        <div class="container">
+            <div class="copy-to-clipboard">
+                <input id="foo" type="text" value="hello" />
+                <button
+                    class="btn"
+                    data-clipboard-action="copy"
+                    data-clipboard-target="#foo"
+                >
+                    Copy
+                </button>
+            </div>
+        </div>
+
+        <!-- 2. Include library -->
+        <script src="./clipboard.min.js"></script>
+
+        <!-- 3. Instantiate clipboard -->
+        <script>
+            let btn = document.querySelector(".btn");
+            var clipboard = new ClipboardJS(".btn");
+            let clearCopyText;
+
+            clipboard.on("success", function (e) {
+                btn.innerHTML = "Copied";
+                clearInterval(clearCopyText);
+                clearCopyText = setTimeout(() => {
+                    btn.innerHTML = "Copy";
+                }, 2000);
+            });
+
+            clipboard.on("error", function (e) {
+                console.log(e);
+            });
+        </script>
+    </body>
+</html>
