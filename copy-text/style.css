@@ -18,12 +18,14 @@
 }
 .container .copy-to-clipboard #btn .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
   background-color: black;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 8px 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 8px 16px;
   position: absolute;
   z-index: 1;
   bottom: 150%;
