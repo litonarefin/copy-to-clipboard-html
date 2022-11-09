@@ -28,20 +28,14 @@
   height: 30px;
   border: 0px;
   background: none;
-}
-.container .copy-to-clipboard .btn-top {
   position: absolute;
   content: " ";
   top: 0;
   right: 0;
-}
-.container .copy-to-clipboard .btn-bottom {
-  position: absolute;
-  content: " ";
-  right: -22px;
-  bottom: 4px;
+  border: 1px solid #a6a6a6;
+  cursor: pointer;
 }
 .container .copy-to-clipboard .btn:hover {
-  border: 1.5px solid #a6a6a6;
-  cursor: pointer;
+  background-color: rgb(78, 78, 78);
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
