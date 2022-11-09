@@ -1,0 +1,368 @@
+//1. Github Style
+.github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 30px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    .copy2clip-target {
+        width: 100%;
+        height: 100%;
+        padding: 5px 12px;
+        outline: none;
+        border: none;
+        box-sizing: border-box;
+        border-radius: 6px 0px 0px 6px;
+        background-color: #f6f8fa;
+        &:focus {
+            outline: 2px solid #0969da;
+            margin-right: 2px;
+        }
+    }
+    .copy2clip-btn {
+        width: 52px;
+        height: 100%;
+        border: none;
+        border-radius: 0px 6px 6px 0px;
+        border-left: 1px solid #d0d7de;
+        background-color: #f6f8fa;
+        cursor: pointer;
+        svg {
+            width: 18px;
+            color: #24292f;
+        }
+    }
+    .copy2clip-btn:hover {
+        background-color: #e8e9f2;
+    }
+}
+
+//2. Bitbucket Style
+.bitbucket {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    width: 350px;
+    height: 30px;
+    border-radius: 3px;
+    position: relative;
+    .copy2clip-target {
+        width: 100%;
+        height: 100%;
+        padding: 5px 12px;
+        outline: none;
+        border: none;
+        box-sizing: border-box;
+        border: 1px solid #d0d7de;
+        border-radius: 3px;
+        background-color: #f6f8fa;
+        &:focus {
+            outline: 2px solid #0969da;
+        }
+    }
+    .copy2clip-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 100%;
+        border: none;
+        background: none;
+        cursor: pointer;
+        svg {
+            width: 18px;
+            color: #24292f;
+        }
+        &:hover {
+            background-color: #e8e9f2;
+        }
+    }
+}
+
+//3. Npm Style
+.npm {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 40px;
+    border: 1.5px solid #d5cccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    .copy2clip-arrow-icon {
+        width: 20px;
+        padding: 0 10px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .copy2clip-target {
+        border: none;
+        width: 100%;
+        padding: 8px 0px;
+        outline: none;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .copy2clip-copy-icon {
+        width: 20px;
+        color: rgba(0, 0, 0, 0.5);
+        padding: 0 10px;
+        visibility: hidden;
+    }
+    &:hover {
+        background-color: #dbffdb;
+        .copy2clip-target {
+            background-color: #dbffdb;
+        }
+        .copy2clip-copy-icon {
+            visibility: visible;
+        }
+    }
+}
+
+// 4. Dribble URL: Style
+.dribble-1 {
+    width: 350px;
+    position: relative;
+    .copy2clip-target {
+        border: 1px solid #d3d3d3;
+        font-size: 18px;
+        padding: 8px 84px 8px 12px;
+        color: #444;
+        border-radius: 3px;
+        width: 100%;
+        box-sizing: border-box;
+        &:focus {
+            outline: none;
+        }
+    }
+    .copy2clip-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 78px;
+        padding: 0 12px;
+        background-color: #0882f6;
+        color: #fff;
+        border: none;
+        border-radius: 0px 3px 3px 0px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .copy2clip-btn-icon {
+            margin-right: 2px;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+.dribble-2 {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    padding-right: 5px;
+    box-shadow: 0px 0px 13px -5px #444;
+    svg {
+        width: 28px;
+        padding: 5px 12px;
+        color: #9eacc1;
+        border-right: 1px solid #e2e0e0;
+    }
+    .copy2clip-target {
+        border: none;
+        width: 100%;
+        padding: 8px 15px;
+        outline: none;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+    .copy2clip-btn {
+        width: 104px;
+        height: 75%;
+        border: 0;
+        color: #fff;
+        border-radius: 4px;
+        background-color: #4d90fd;
+        cursor: pointer;
+    }
+}
+
+.dribble-3 {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    padding-right: 5px;
+    box-shadow: 0px 0px 13px -5px #444;
+    .copy2clip-link-icon {
+        svg {
+            width: 18px;
+            padding: 5px 12px;
+            color: #9eacc1;
+            border-right: 1px solid #e2e0e0;
+        }
+    }
+    .copy2clip-target {
+        border: none;
+        width: 100%;
+        padding: 8px 15px;
+        outline: none;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+    .copy2clip-btn {
+        border: 0;
+        color: #fff;
+        border-radius: 4px;
+        background-color: #4d90fd;
+        padding: 4px;
+        border-radius: 50%;
+        cursor: pointer;
+        .copy2clip-btn-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                width: 16px;
+                height: 16px;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.dribble-4 {
+    width: 350px;
+    position: relative;
+    .copy2clip-target {
+        border: 1px solid #d3d3d3;
+        font-size: 18px;
+        padding: 8px 84px 8px 12px;
+        color: #444;
+        border-radius: 3px;
+        width: 100%;
+        box-sizing: border-box;
+        &:focus {
+            outline: none;
+        }
+    }
+    .copy2clip-btn {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        transform: translateY(5px);
+        right: 5px;
+        height: 75%;
+        background-color: #0882f6;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .copy2clip-btn-icon {
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+.dribble-5 {
+    .copy2clip-btn {
+        font-size: 18px;
+        color: #4c4c4c;
+        font-weight: 500;
+        .copy2clip-tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+            cursor: pointer;
+            .copy2clip-tooltip-text {
+                visibility: hidden;
+                background-color: rgb(50, 50, 50);
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                width: max-content;
+                padding: 8px 16px;
+                position: absolute;
+                z-index: 1;
+                bottom: 150%;
+                left: 90%;
+                margin-left: -60px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 30%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: rgb(50, 50, 50) transparent transparent
+                        transparent;
+                }
+            }
+        }
+        .copy2clip-tooltip:hover .copy2clip-tooltip-text {
+            visibility: visible;
+        }
+    }
+}
+
+//5. Google Translate
+.copy-to-clipboard {
+    width: 350px;
+    position: relative;
+    .copy2clip-target {
+        width: 100%;
+        height: 120px;
+        border-radius: 2px;
+        padding: 10px;
+        font-size: 18px;
+        resize: none;
+        border: 1px solid #e4e5e7;
+        box-sizing: border-box;
+        background-color: #f8f9fa;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    .copy2clip-btn {
+        width: 30px;
+        height: 30px;
+        border: 0px;
+        background: none;
+        position: absolute;
+        content: " ";
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+        .copy2clip-btn-icon {
+            svg {
+                width: 16px;
+                height: 16px;
+                color: #202124;
+            }
+        }
+        &:hover {
+            border: 1px solid #e4e5e7;
+        }
+    }
+}
